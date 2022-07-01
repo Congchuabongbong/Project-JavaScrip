@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div class="box-question">
+            <div class="question-content">
+                <h1 id="question">What is the most used programming language in 2019</h1>
+                <ul id="list-option">
+                    <li class="option">
+                        <input type="radio" value="a" name="answer" id="answer_a">
+                        <label id="a_text" for="answer_a">Hypertext Markup Language</label>
+                    </li>
+                    <li class="option">
+                        <input type="radio" value="b" name="answer" id="answer_b">
+                        <label id="b_text" for="answer_b">Cascading Style Sheet</label>
+                    </li>
+                    <li class="option">
+                        <input type="radio" value="c" name="answer" id="answer_c">
+                        <label id="c_text" for="answer_c">Javascript Object Notation</label>
+                    </li>
+                    <li class="option">
+                        <input type="radio" value="d" name="answer" id="answer_d">
+                        <label id="d_text" for="answer_d">Helicopter Terminals Motorboats Lamborginis</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="btn btn-submit">Submit</button>
+        <button class="btn btn-back" style="display: none;">Back to the question</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

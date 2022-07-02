@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 63.5%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  background-image: url("https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzNDI4NTd8MHwxfHNlYXJjaHwxfHxsb25kb258ZW58MHx8fHwxNjU2NzQ1Mjg2&ixlib=rb-1.2.1&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.8156862745);
+  color: white;
+  padding: 2rem;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1rem;
+}
+.card .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.card .search .btn-search {
+  margin-left: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  height: 39px;
+  width: 39px;
+  background-color: rgba(124, 124, 124, 0.168627451);
+  color: white;
+  cursor: pointer;
+}
+.card .search .btn-search:active {
+  background-color: rgba(124, 124, 124, 0.6078431373);
+}
+.card .search-bar {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+  background-color: rgba(124, 124, 124, 0.168627451);
+  color: white;
+  font-family: inherit;
+  font-size: 100%;
+  transition: background-color 0.1s ease-in-out;
+  width: calc(100% - 100px);
+}
+.card .search-bar:focus {
+  background-color: rgba(124, 124, 124, 0.6078431373);
+}
+.card .search-bar::placeholder {
+  font-size: 1.4rem;
+}
+.card .weather {
+  margin-top: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+.card .weather .city {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.8;
+  color: white;
+  margin-bottom: 10px;
+}
+.card .weather .temp {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+.card .weather .humidity,
+.card .weather .wind {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.card .weather .humidity:first-letter,
+.card .weather .wind:first-letter {
+  text-transform: uppercase;
+}
+.card .weather .box-description {
+  display: flex;
+  text-transform: capitalize;
+  align-items: center;
+  margin-left: -7px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.card .weather .box-description .description {
+  margin-left: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

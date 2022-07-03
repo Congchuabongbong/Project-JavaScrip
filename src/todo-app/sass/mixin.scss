@@ -1,0 +1,33 @@
+@import './variable.scss';
+
+@mixin basic-button {
+    color: $white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-colum-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin out-border-none {
+    border: none;
+    outline: none;
+}
+
+@mixin mobile {
+    @media (max-width: calc(#{$XS} - 1px)) {
+        @content;
+    }
+}

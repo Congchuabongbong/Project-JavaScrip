@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import './variable.scss';
+@import './mixin.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(120deg, #f6d365, #fda085);
+    color: $white;
+}
+
+.header {
+    min-height: 15vh;
+    font-size: 1.5rem;
+    @include flex-row-center;
+}
+
+.form {
+    min-height: 15vh;
+    user-select: none;
+    @include flex-row-center;
+
+    .todo-input,
+    .todo-button {
+        padding: 0.5rem;
+        font-size: 2rem;
+        @include out-border-none;
+        background: $white;
+    }
+
+    .todo-button {
+        color: $primary;
+        background: $white;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+
+    .select {
+        margin: 1rem;
+        position: relative;
+        overflow: hidden;
+
+        .filter-todo {
+            padding: 1.2rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            @include out-border-none;
+            color: $primary;
+            width: 10rem;
+            cursor: pointer;
+        }
+
+        &::after {
+            content: "\25BC";
+            position: absolute;
+            background-color: $primary;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        &:hover::after {
+            background-color: $white;
+            color: $primary;
+        }
+    }
+}
+
+.todo-container {
+    @include flex-row-center;
+
+    .todo-list {
+        min-width: 30%;
+        list-style: none;
+
+        .todo {
+            display: flex;
+            margin: 0.5rem;
+            background-color: $white;
+            color: $text-color;
+            font-size: 1.5rem;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.5s ease;
+
+            li {
+                flex: 1;
+            }
+
+            .trash-btn {
+                background-color: $primary;
+                @include basic-button;
+
+                &:active {
+                    opacity: 0.8;
+                }
+
+                .fa-trash-can {
+                    pointer-events: none;
+                }
+            }
+
+            .complete-btn {
+                background-color: rgb(73, 204, 73);
+                @include basic-button;
+
+                &:active {
+                    opacity: 0.8;
+                }
+
+                .fa-check {
+                    pointer-events: none;
+                }
+            }
+
+            .todo-item {
+                padding: 0rem 0.5rem;
+            }
+
+            &.completed {
+                text-decoration: line-through;
+                opacity: 0.5;
+            }
+
+            &.fall {
+                transform: translateY(8rem) rotateZ(20deg);
+                opacity: 0;
+            }
+        }
+    }
+}

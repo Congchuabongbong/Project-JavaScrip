@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch src/weather-app/sass/style.scss src/weather-app/css/style.css"
+    "start": "sass --watch src/todo-app/sass/style.scss src/todo-app/css/style.css"
   },
   "keywords": [],
   "author": "",
